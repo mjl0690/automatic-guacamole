@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>My AngularJS App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="index.js"></script>
+</head>
+<body >
+
+<div ng-app="app" ng-controller="testCtrl as ctrl">
+<div  ng-click="ctrl.done = false; ctrl.randomStyle(0, ctrl.pixels.length <= 1000 ? ctrl.pixels.length : 1000, ctrl.pixels.length <= 1000 ? true : false);" >
+<div ng-if="ctrl.done" style="float:left; height:10px; width:10px;" ng-style="{'background-color':pixel.style.backgroundColor}" ng-repeat="pixel in ctrl.pixels">
+
+</div>
+</div>
+</div>
+</body>
+</html>
